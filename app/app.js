@@ -8,7 +8,8 @@ angular.module('myApp', [
   'myApp.home',
   'myApp.dashboard',
   'myApp.calendar',
-  'myApp.version'
+  'myApp.version',
+  'ui.calendar'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/home'});

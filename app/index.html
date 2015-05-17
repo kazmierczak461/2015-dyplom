@@ -13,11 +13,12 @@
   <link rel="shortcut icon" href="http://sstatic.net/stackoverflow/img/favicon.ico">
 
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css"/>
+
   <link rel="stylesheet" href="app.css">
   <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
 
 </head>
 <body>
@@ -62,13 +63,21 @@
   </nav>
 
   <!--[if lt IE 7]>
-  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <div ng-view></div>
     </div>
   </div>
+
+  <!-- COMPONENTS -->
+
+  <script type="text/javascript" src="bower_components/moment/moment.js"></script>
+  <script type="text/javascript" src="bower_components/angular-ui-calendar/calendar.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+  <script type="text/javascript" src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+  <script type="text/javascript" src="bower_components/fullcalendar/dist/gcal.js"></script>
 
 
   <!-- In production use:

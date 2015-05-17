@@ -1,5 +1,48 @@
-<p>Calendar content</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="form-group">
+  <h1 class="main-title">Calendar</h1>
+</div>
+<section id="directives-calendar2">
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="form-group">
+        <h2 class="title-margin">Add New Event</h2>
+        <ul class="list-unstyled">
+          <li ng-repeat="e in events">
+            <div class="alert alert-info">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close" ng-click="remove($index)"><span aria-hidden="true">&times;</span></button>
+              <div class="form-group">
+                <p><b>{{e.start | date:"MMM dd"}} - {{e.end | date:"MMM dd"}}</b></p>
+              </div>
+              <input name="name"  class="form-control" placeholder="Event Name" type="text" ng-minlength="2"  ng-model="e.title"/>
+            </div>
+          </li>
+        </ul>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" ng-click="addEvent()">+</button>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-xs-8">
+      <tabset>
+        <tab select="renderCalender('myCalendar3');">
+          <div class="calendar" ng-model="eventSources2" calendar="myCalendar3" ui-calendar="uiConfig.calendar"></div>
+          <br>
+          <div class="row">
+            <div class="col-xs-4 col-xs-offset-8 button-cal-align">
+              <div class="btn-toolbar">
+                <div class="btn-group">
+                  <button class="btn btn-success" ng-click="changeView('agendaDay', 'myCalendar3')">Day</button>
+                  <button class="btn btn-success" ng-click="changeView('agendaWeek', 'myCalendar3')">Week</button>
+                  <button class="btn btn-success" ng-click="changeView('month', 'myCalendar3')">Month</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tab>
+      </tabset>
+    </div>
+  </div>
+</section>
+
+
